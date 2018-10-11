@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/form', 'UserController@reg');
+Route::post('/done', 'UserController@done');
+
+Route::get('/id{id?}', 'UserController@index');
+
+Route::get('/tasks', 'TasksController@index');
+Route::get('/plusc{id?}', 'CountersController@index');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
