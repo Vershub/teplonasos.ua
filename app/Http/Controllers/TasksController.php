@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Task;
 
 
 class TasksController extends Controller
@@ -15,8 +15,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = DB::table('tasks')->get();
-        //$test = array(['test' => 'test']);
+        $tasks = Task::all();
         return view('tasks')->with(compact('tasks'));
     }
 

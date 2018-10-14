@@ -21,7 +21,9 @@ Route::post('/done', 'UserController@done');
 Route::get('/id{id?}', 'UserController@index');
 
 Route::get('/tasks', 'TasksController@index');
-Route::get('/plusc{id?}', 'CountersController@index');
+Route::get('/plusc', 'CountersController@index');
+Route::get('/queue', 'QueueController@index');
+Route::get('/accept', 'QueueController@accept');
 
 
 Route::group(['prefix' => 'admin'], function () {
