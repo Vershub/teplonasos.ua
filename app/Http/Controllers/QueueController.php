@@ -10,7 +10,7 @@ class QueueController extends Controller
 {
     public function index () {
 
-        $logs = Log::where('status', '=', 0)
+        $logs = Log::statusqueue()
             ->orderBy('added_on', 'DESC')
             ->get();
 
