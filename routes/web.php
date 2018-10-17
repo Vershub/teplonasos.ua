@@ -23,7 +23,10 @@ Route::get('/id{id?}', 'UserController@index');
 Route::get('/tasks', 'TasksController@index');
 Route::get('/plusc/{id}', 'CountersController@index');
 Route::get('/queue', 'QueueController@index');
-Route::get('/accept', 'QueueController@accept');
+Route::get('/accept/{id}', 'QueueController@accept');
+
+
+Route::get('/places', 'PlacesController@index');
 
 
 Route::group(['prefix' => 'admin'], function () {

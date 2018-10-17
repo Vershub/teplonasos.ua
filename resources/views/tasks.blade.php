@@ -15,7 +15,7 @@
             <th scope="row">{{$task->id}}</th>
             <td><a class="btn btn-info" href="/plusc/{{$task->id}}">{{$task->name}}</a></td>
             <td>{{$task->counter}}</td>
-            <td><a class="btn btn-info" href="/accept?id={{$task->id}}">принять в работу</a></td>
+            <td><a class="btn btn-info" href="/accept/{{$task->id}}">принять в работу</a></td>
         </tr>
 @endforeach
     </table>
