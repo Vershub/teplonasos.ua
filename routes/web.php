@@ -27,6 +27,9 @@ Route::get('/accept/{id}', 'QueueController@accept');
 
 
 Route::get('/places', 'PlacesController@index');
+Route::post('/places/create', 'PlacesCreateController@index');
+Route::get('places/add', 'PlacesFormController@index');
+Route::get('places/{id}/', 'PlacesShowController@index');
 
 
 Route::group(['prefix' => 'admin'], function () {
